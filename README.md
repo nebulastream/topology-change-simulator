@@ -1,10 +1,29 @@
 # topology-change-simulator
 In this repository, we have code to setup a distributed NebulaStream topology. This code enable us to simulate topological changes based on the provided configuration files.  
 
-Command to start the simulation:
+# Steps to launch simulation
+
+1. Compile simulation
 ```
-start_experiment <STATEFUL/STATELESS> <nes directory> <experiment input config path> <output directory> <tcp input server executable> <number of runs> <log level (optional)>, <experiment path for retrial (optional)>
+cargo build --release 
 ```
+2. Command to start the simulation:
+```
+./target/release/start_experiment <STATEFUL/STATELESS> <nes directory> <experiment input config path> <output directory> <tcp input server executable> <number of runs> <log level (optional)>, <experiment path for retrial (optional)>
+```
+## Parameters 
+<STATEFUL/STATELESS> - defines type of operator to experiment 
+
+<nes directory> - directory with compiled NebulaStream system 
+
+<experiment input config path> - path to the configuration file 
+
+<output directory> - path to the directory to write experiment resutls 
+
+<tcp input server executable> - path to the binary file of TCP input server 
+	
+<number of runs> - number of the runs of the experiment
+
 # Example of configuration 
 
 ```
