@@ -7,6 +7,7 @@ start_experiment <STATEFUL/STATELESS> <nes directory> <experiment input config p
 ```
 # Example of configuration 
 
+```
 # This setting defines the reconfiguration mechanism to use
 enable_query_reconfiguration = [true, false]
 
@@ -65,3 +66,4 @@ fixed_topology_nodes = "fixed_topology.json"
 
 [default_config.paths.mobile_trajectories_directory]
 TrajectoriesDir = "."
+```
